@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CompanyData>
-    <Employee>
-        <Name>John Doe</Name>
-        <Role>Engineer</Role>
-    </Employee>
-</CompanyData>
+<EntityDescriptor entityID="test">
+  <!-- Missing required elements like:
+       - IDPSSODescriptor
+       - SingleSignOnService
+       - certificate -->
+</EntityDescriptor>
