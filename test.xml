@@ -1,0 +1,5 @@
+<EntityDescriptor entityID="https://idp.example.com">
+  <IDPSSODescriptor>
+    <SingleSignOnService Binding="..." Location="..."/>
+  </IDPSSODescriptor>
+</EntityDescriptor>
