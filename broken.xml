@@ -1,6 +1,5 @@
-<EntityDescriptor entityID="test">
-  <!-- Missing required elements like:
-       - IDPSSODescriptor
-       - SingleSignOnService
-       - certificate -->
+<EntityDescriptor entityID="https://idp.example.com">
+  <IDPSSODescriptor>
+    <SingleSignOnService Binding="..." Location="..."/>
+  </IDPSSODescriptor>
 </EntityDescriptor>
